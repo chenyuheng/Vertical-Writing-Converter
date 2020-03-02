@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>竖排文字转换器</title>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body onload="initiate()">
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<h4>竖排文字转换器</h4>
+				<a class="github-button" href="https://github.com/chenyuheng" aria-label="Follow @chenyuheng on GitHub">Follow @chenyuheng</a>
+				<a class="github-button" href="https://github.com/chenyuheng/Vertical-Writing-Converter" data-icon="octicon-star" aria-label="Star chenyuheng/Vertical-Writing-Converter on GitHub">Star</a>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m12 l6">
+				<div calss="container">
+					<div class="row">
+						<div class="col s12"><label>文本：</label></div>
+						<div class="input-field col s12">
+							<textarea id="original_text" class="materialize-textarea"></textarea>
+						</div>
+						<div class="col s12 m6">
+							<form action="#">
+								<label>列长（高度）：<span id="height_number"></span></label>
+								<p class="range-field">
+									<input type="range" id="height_input" min="1" max="25" />
+								</p>
+							</form>
+						</div>
+						<div class="switch">
+							<label><input type="checkbox" id="is_converting_punctuation"><span class="lever"></span>转换标点</label>
+						</div>
+						<br />
+						<div class="switch">
+						<label><input disabled type="checkbox" id="is_converting_to_traditional_Chinese"><span class="lever"></span>转换繁体（暂不支持）</label>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m12 l6">
+				<label>竖排文本（可选中复制）：</label>
+				<div id="vertical_text" class="center-align"></div>
+				<div class="center-align"><br /><a class="waves-effect waves-light btn" onclick="copy()">复制</a></div>
+			</div>
+		</div>
+		<div class="row center-align">
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
