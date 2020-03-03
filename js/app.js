@@ -101,6 +101,9 @@ function convert_and_display() {
     if (is_converting_punctuation) {
         parsed_text = convert_punctuations(parsed_text);
     }
+    if (is_converting_to_traditional_Chinese) {
+        parsed_text = s2t(parsed_text);
+    }
     let vertical_text = convert_text(convert_to_fullwidth(parsed_text));
     document.getElementById("vertical_text").innerText = vertical_text;
 }
@@ -109,6 +112,7 @@ document.getElementById("original_text").addEventListener("keyup", refresh);
 document.getElementById("is_converting_punctuation").addEventListener("click", refresh);
 document.getElementById("height_input").addEventListener("mousemove", refresh);
 document.getElementById("height_input").addEventListener("touchmove", refresh);
+document.getElementById("is_converting_to_traditional_Chinese").addEventListener("click", refresh);
 
 function copy() {
     navigator.clipboard.writeText(document.getElementById("vertical_text").innerText).then(function() {
