@@ -14,4 +14,4 @@
 
 ## 访问地址
 
-https://chenyuheng.github.iog/Vertical-Writing-Converter/
+https://chenyuheng.github.io/Vertical-Writing-Converter/
